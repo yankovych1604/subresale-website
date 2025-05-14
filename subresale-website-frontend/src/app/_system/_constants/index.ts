@@ -15,17 +15,13 @@ export const STEPS: {title: string, description: string}[] = [
   {title: "Допоможемо знайти роботу", description: "Досягни мети та стань"},
 ];
 
-export const COURSES: {name: string, url: string}[] = [
-  {name: "UI/UX designer", url: "ui-ux"},
-  {name: "Data analyst", url: "data-analyst"},
-  {name: "QA engineer", url: "qa"},
-  {name: "Python developer", url: "python"},
-  {name: "Front-end developer", url: "frontend"},
-  {name: "Digital marketer", url: "digital-marketer"},
-  {name: "Full-stack developer", url: "fullstack"},
-  {name: "DevOps engineer", url: "devops"},
-  {name: "Recruiter", url: "recruiter"},
-  {name: "Java developer", url: "java"},
+export const SUBSCRIPTION: {name: string, url: string}[] = [
+  {name: "Кіно", url: "ui-ux"},
+  {name: "Музика", url: "data-analyst"},
+  {name: "Дизайн", url: "qa"},
+  {name: "Навчання", url: "python"},
+  {name: "Ігри", url: "frontend"},
+  {name: "Соцмережі", url: "frontend"},
 ];
 
 export const FAQS: {question: string, answer: string}[] = [

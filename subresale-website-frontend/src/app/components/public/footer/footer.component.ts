@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NgForOf } from '@angular/common';
-import { COURSES } from '../../../_system/_constants';
+import { SUBSCRIPTION } from '../../../_system/_constants';
 
 @Component({
   selector: 'app-footer',
@@ -14,5 +14,5 @@ import { COURSES } from '../../../_system/_constants';
   standalone: true,
 })
 export class FooterComponent {
-  public courses: {name: string, url: string}[] = COURSES;
+  public courses: {name: string, url: string}[] = SUBSCRIPTION;
 }

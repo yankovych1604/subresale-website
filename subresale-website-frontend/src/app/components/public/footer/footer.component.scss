@@ -32,10 +32,13 @@
   }
 
   &__logo-img {
-    width: 50px;
-    height: 50px;
-  }
-
+  width: 50px;
+  height: 50px;
+  border: 2px solid red; // червона рамка
+  border-radius: 8px;     // заокруглені кути (можна змінити значення)
+  padding: 2px;           // щоб рамка не притискалась до зображення
+  box-sizing: border-box; // щоб padding і border не збільшували розмір
+}
   &__logo-text {
     width: 150px;
     @include mixins.fonts-text($manrope-bold, 20px, $black);
