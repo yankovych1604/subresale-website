@@ -2,10 +2,10 @@ import { Routes } from '@angular/router';
 import { authGuard } from './_system/_guards/auth/auth.guard';
 
 export const routes: Routes = [
-  // {
-  //   path: '',
-  //   loadChildren: () => import('./pages/public/home/home.module').then(m => m.HomeModule)
-  // },
+  {
+    path: '',
+    loadChildren: () => import('./pages/public/home/home.module').then(m => m.HomeModule)
+  },
   // {
   //   path: 'course',
   //   loadChildren: () => import('./pages/public/course/course.module').then(m => m.CourseModule)
