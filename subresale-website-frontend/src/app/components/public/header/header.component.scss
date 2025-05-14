@@ -19,7 +19,7 @@
 
 
   &__logo {
-    gap: 0 20px;
+    gap: 10px 40px;
     margin-right: 6px;
     @include mixins.flex(row, flex-start, center);
   }
@@ -32,15 +32,20 @@
     @include mixins.flex(row, space-between, center);
   }
 
-  &__logo-img {
-    width: 48px;
-    height: 48px;
-  }
+&__logo-img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid red; // червона рамка
+  border-radius: 8px;     // заокруглені кути (можна змінити значення)
+  padding: 2px;           // щоб рамка не притискалась до зображення
+  box-sizing: border-box; // щоб padding і border не збільшували розмір
+}
+
 
   &__logo-text {
-    width: 81px;
-    height: 36px;
-    @include mixins.fonts-text($manrope-bold, 14px, $black);
+    width: 100px;
+    height: 100%;
+    @include mixins.fonts-text($manrope-bold, 16px, $black);
   }
 
   &__option {

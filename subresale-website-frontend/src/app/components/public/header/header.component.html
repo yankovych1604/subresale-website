@@ -2,15 +2,17 @@
   <div class="header">
     <div class="header__logo">
       <a class="header__link" [routerLink]="''">
-        <img src="assets/icons/course-name-icon.png" alt="course-academy-logo" class="header__logo-img">
-        <p class="header__logo-text">Course academy</p>
+        <img src="assets/icons/subscription-icon.jpg" alt="course-academy-logo" class="header__logo-img">
+        <p class="header__logo-text">Subscription Resale</p>
       </a>
 
       <mat-select [(value)]="selectedCategory" disableRipple (openedChange)="openCourseMenu($event)" (selectionChange)="navigateToCategory($event.value)">
-        <mat-option [value]="'default'" disabled>Курси</mat-option>
-        <mat-option [value]="'popular'">Популярні курси</mat-option>
-        <mat-option [value]="'coded'">Курси з кодингом</mat-option>
-        <mat-option [value]="'nocoded'">Курси без кодингу</mat-option>
+        <mat-option [value]="'default'" disabled>Підписки</mat-option>
+        <mat-option [value]="'cinema'">Кіно</mat-option>
+        <mat-option [value]="'music'">Музика</mat-option>
+        <mat-option [value]="'design'">Дизайн</mat-option>
+        <mat-option [value]="'study'">Навчання</mat-option>
+        <mat-option [value]="'game'">Ігри</mat-option>
       </mat-select>
     </div>
 
@@ -18,12 +20,6 @@
       <ul class="navigation__list">
         <li class="navigation__item">
           <a class="navigation__item-link" [routerLink]="'/about-us'">Про нас</a>
-        </li>
-        <li class="navigation__item">
-          <a class="navigation__item-link" [routerLink]="'/reviews'">Відгуки</a>
-        </li>
-        <li class="navigation__item" *ngIf="isLoggedIn">
-          <a class="navigation__item-link" [routerLink]="'/schedule'">Розклад занять</a>
         </li>
         <li class="navigation__item" *ngIf="isLoggedIn">
           <a class="navigation__item-link" [routerLink]="'/account'">Мій кабінет</a>
@@ -43,12 +39,6 @@
   <ul class="mobile__navigation-list">
     <li class="mobile__navigation-item">
       <a class="mobile__navigation-link" [routerLink]="'/about-us'">Про нас</a>
-    </li>
-    <li class="mobile__navigation-item">
-      <a class="mobile__navigation-link" [routerLink]="'/reviews'">Відгуки</a>
-    </li>
-    <li class="mobile__navigation-item" *ngIf="isLoggedIn">
-      <a class="mobile__navigation-link" [routerLink]="'/schedule'">Розклад занять</a>
     </li>
     <li class="mobile__navigation-item" *ngIf="isLoggedIn">
       <a class="mobile__navigation-link" [routerLink]="'/account'">Мій кабінет</a>

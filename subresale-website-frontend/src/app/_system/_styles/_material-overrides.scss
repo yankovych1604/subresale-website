@@ -2,7 +2,7 @@
 @use './theme-material' as *;
 
 mat-select {
-  width: 100px !important;
+  width: 130px !important;
   height: 48px;
   cursor: pointer;
   @include mixins.box-style(1px solid $secondary, 10px, $primary);
