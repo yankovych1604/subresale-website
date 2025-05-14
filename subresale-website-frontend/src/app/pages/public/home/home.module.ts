@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home.component';
 // import { HomepageCardComponent } from "../../../components/public/homepage-card/homepage-card.component";
-// import { FaqItemComponent } from "../../../components/public/faq-item/faq-item.component";
+ import { FaqItemComponent } from "../../../components/public/faq-item/faq-item.component";
 // import { IntroBlockComponent } from "../../../components/public/intro-block/intro-block.component";
 
 @NgModule({
@@ -15,7 +15,7 @@ import { HomeComponent } from './home.component';
     CommonModule,
     HomeRoutingModule,
     // HomepageCardComponent,
-    // FaqItemComponent,
+    FaqItemComponent,
     // IntroBlockComponent,
   ]
 })
