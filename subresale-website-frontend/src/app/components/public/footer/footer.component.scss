@@ -15,33 +15,37 @@
 
   &__content {
     width: 100%;
-    padding-bottom: 56px;
+    padding-bottom: 16px;
     @include mixins.flex(row, space-between, flex-start);
   }
 
   &__info {
     width: 220px;
+    gap: 39px 0;
+    @include mixins.flex(column, flex-start, flex-start);
   }
 
   &__logo {
-    gap: 0 20px;
+    width: fit-content;
+    gap: 0 10px;
+    height: 40px;
+    padding: 8px 5px;
     cursor: pointer;
-    margin-bottom: 12px;
     text-decoration: none;
-    @include mixins.flex(row, flex-start, center);
+    @include mixins.flex(row, space-between, center);
+    @include mixins.box-style(2px solid $red, 10px, transparent);
   }
 
   &__logo-img {
-  width: 50px;
-  height: 50px;
-  border: 2px solid red; // червона рамка
-  border-radius: 8px;     // заокруглені кути (можна змінити значення)
-  padding: 2px;           // щоб рамка не притискалась до зображення
-  box-sizing: border-box; // щоб padding і border не збільшували розмір
-}
+    width: 24px;
+    height: 24px;
+  }
+
   &__logo-text {
-    width: 150px;
-    @include mixins.fonts-text($manrope-bold, 20px, $black);
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
+    @include mixins.fonts-text($manrope-bold, 16px, $black);
   }
 
   &__address {
@@ -53,7 +57,7 @@
 
     &-title {
       margin-bottom: 15px;
-      @include mixins.fonts-text($manrope-bold, 18px, $black);
+      @include mixins.fonts-text($manrope-bold, 16px, $black);
     }
 
     &-content {
@@ -64,7 +68,7 @@
     &-list {
       list-style: none;
       display: grid;
-      gap: 15px 40px;
+      gap: 10px 25px;
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -76,6 +80,10 @@
       text-decoration: none;
       @include mixins.fonts-text($manrope-medium, 16px, $darkgray);
     }
+
+    &-link:hover {
+      text-decoration: underline;
+    }
   }
 
   &__bottom {
@@ -86,7 +94,7 @@
   }
 
   &__copyright-text {
-    @include mixins.fonts-text($manrope-medium, 18px, $gunmetal);
+    @include mixins.fonts-text($manrope-medium, 16px, $gunmetal);
   }
 
   &__socials {
@@ -95,8 +103,8 @@
   }
 
   &__social {
-    width: 24px;
-    height: 24px;
+    width: 22px;
+    height: 22px;
     cursor: pointer;
 
     &-icon {
@@ -113,51 +121,6 @@
   @media (max-width: $media-lg) {
     padding: 56px 20px 32px;
 
-    &__content {
-      gap: 40px 0;
-      padding-bottom: 40px;
-      @include mixins.flex(column, flex-start, center);
-    }
-
-    &__info {
-      width: 100%;
-      @include mixins.flex(row, space-between, center);
-    }
-
-    &__address {
-      width: 210px;
-    }
-
-    &__courses {
-      @include mixins.flex(column, flex-start, center);
-    }
-
-    &__courses-content {
-      flex-wrap: wrap;
-    }
-
-    &__courses-list {
-      gap: 15px 20px;
-      grid-template-rows: repeat(4, 1fr);
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-areas:
-        "item1 item5 item7"
-        "item2 item6 item8"
-        "item3 .     item9"
-        "item4 .     item10";
-    }
-
-    .footer__courses-item:nth-child(1) { grid-area: item1; }
-    .footer__courses-item:nth-child(2) { grid-area: item2; }
-    .footer__courses-item:nth-child(3) { grid-area: item3; }
-    .footer__courses-item:nth-child(4) { grid-area: item4; }
-    .footer__courses-item:nth-child(5) { grid-area: item9; }
-    .footer__courses-item:nth-child(6) { grid-area: item6; }
-    .footer__courses-item:nth-child(7) { grid-area: item7; }
-    .footer__courses-item:nth-child(8) { grid-area: item8; }
-    .footer__courses-item:nth-child(9) { grid-area: item5; }
-    .footer__courses-item:nth-child(10) { grid-area: item10; }
-
     &__bottom {
       gap: 20px 0;
       @include mixins.flex(column, flex-start, center);
@@ -173,8 +136,6 @@
     }
 
     &__social {
-      width: 24px;
-      height: 24px;
       cursor: pointer;
 
       &-icon {
@@ -187,6 +148,7 @@
   @media (max-width: $media-md) {
     &__content {
       gap: 30px 0;
+      @include mixins.flex(column, flex-start, flex-start);
     }
 
     &__info {
@@ -195,29 +157,13 @@
       @include mixins.flex(column, flex-start, center);
     }
 
-    &__logo {
-      width: 160px;
-
-      &-text {
-        width: 90px;
-        @include mixins.fonts-text($manrope-bold, 16px, $black);
-      }
-    }
-
     &__address {
       text-align: center;
-      @include mixins.fonts-text($manrope-regular, 14px, $darkgray);
     }
 
     &__courses {
       width: 100%;
-
-      &-content {
-        gap: 0 20px;
-        width: 100%;
-        flex-wrap: nowrap;
-        @include mixins.flex(column, flex-start, center);
-      }
+      @include mixins.flex(column, flex-start, center);
 
       &-title {
         margin-bottom: 20px;
@@ -231,30 +177,28 @@
         @include mixins.flex(row, center, flex-start);
       }
 
-      &-list {
-        gap: 15px 20px;
-        grid-template-rows: repeat(5, 1fr);
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-        "item1 item6"
-        "item2 item7"
-        "item3 item8"
-        "item4 item9"
-        "item5 item10";
-      }
-
       &-item {
         text-align: center;
       }
+    }
 
-      &-link {
-        @include mixins.fonts-text($manrope-regular, 14px, $darkgray);
-      }
+    &__bottom {
+      gap: 10px 0;
     }
 
     &__copyright-text {
       text-align: center;
       @include mixins.fonts-text($manrope-regular, 16px, $gunmetal);
+    }
+
+    &__social {
+      width: 20px;
+      height: 20px;
+
+      &-icon {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 

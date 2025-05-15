@@ -4,7 +4,7 @@
       <div class="footer__info">
         <a class="footer__logo" [routerLink]="''">
           <img src="assets/icons/subscription-icon.jpg" alt="course-academy-logo" class="footer__logo-img">
-          <p class="footer__logo-text">Subscription Resale</p>
+          <p class="footer__logo-text">SubResale</p>
         </a>
 
         <p class="footer__address">Ukraine, Lviv, 38 Panteleimona Kulisha Street</p>
@@ -15,13 +15,14 @@
 
         <div class="footer__courses-content">
           <ul class="footer__courses-list">
-            <li class="footer__courses-item" *ngFor="let course of courses">
-              <a class="footer__courses-link" [routerLink]="'/course/'+course.url"> {{course.name}} </a>
+            <li class="footer__courses-item" *ngFor="let subscription of subscriptions">
+              <a class="footer__courses-link" [routerLink]="'/course/'+subscription.url"> {{subscription.name}} </a>
             </li>
           </ul>
         </div>
       </div>
     </div>
+
     <div class="footer__bottom">
       <p class="footer__copyright-text">Copyright © 2025 Subscription Resale</p>
 

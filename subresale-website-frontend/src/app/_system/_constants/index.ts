@@ -1,20 +1,3 @@
-export const BENEFITS: string[] = [
-  "AI-квізи",
-  "Q&A сесії",
-  "Розв'язки завдань",
-  "Тех-чеки",
-  "Уроки англійської",
-  "Кар'єрний модуль"
-];
-
-export const STEPS: {title: string, description: string}[] = [
-  {title: "Навчимо необхідному", description: "Отримай знання та навички для першої роботи в ІТ."},
-  {title: "Зберемо портфоліо", description: "Створи реальні проєкти разом із ментором."},
-  {title: "Підготуємо до співбесід", description: "Навчись проходити співбесіди і писати резюме."},
-  {title: "Подамось на вакансії", description: "Пройди всі етапи найму з нашою підтримкою."},
-  {title: "Допоможемо знайти роботу", description: "Досягни мети та стань"},
-];
-
 export const SUBSCRIPTION: {name: string, url: string}[] = [
   {name: "Кіно", url: "ui-ux"},
   {name: "Музика", url: "data-analyst"},

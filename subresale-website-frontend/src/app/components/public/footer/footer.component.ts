@@ -15,5 +15,5 @@ import { SUBSCRIPTION } from '../../../_system/_constants';
 })
 
 export class FooterComponent {
-  public courses: {name: string, url: string}[] = SUBSCRIPTION;
+  public subscriptions: {name: string, url: string}[] = SUBSCRIPTION;
 }
