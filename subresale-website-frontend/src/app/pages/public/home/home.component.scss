@@ -69,6 +69,7 @@
   }
 
   &__title {
+    text-align: center;
     line-height: 50px;
     letter-spacing: -2.45px;
     @include mixins.fonts-text($manrope-bold, 50px, $black);

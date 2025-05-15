@@ -1,7 +1,7 @@
 <div class="sections">
   <section class="section1">
     <div class="section1__container">
-<!--      <app-intro-block [intro]="introData" />-->
+      <app-intro-block />
     </div>
   </section>
 
@@ -9,13 +9,13 @@
     <div class="section2__container">
       <div class="section2__heading">
         <div class="section2__heading-text">
-          <p class="section2__subtitle">Чого ми навчаємо</p>
-          <h2 class="section2__title">Популярні професії</h2>
+          <p class="section2__subtitle">Що ми пропонуємо?</p>
+          <h2 class="section2__title">Популярні невикористані підписки</h2>
         </div>
       </div>
 
       <div class="section2__content">
-<!--        <app-homepage-card  [course]="course" *ngFor="let course of coursesList" />-->
+        <app-homepage-card  [subscription]="subscription" *ngFor="let subscription of subscriptionList" />
       </div>
     </div>
   </section>

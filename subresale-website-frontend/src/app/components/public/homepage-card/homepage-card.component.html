@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card__header">
+    <div class="card__tags">
+      <span class="card__tag card__tag--category">{{ subscription?.category }}</span>
+    </div>
+    <div class="card__image-wrapper">
+      <img [src]="subscription?.image" alt="" class="card__image">
+    </div>
+  </div>
+
+  <div class="card__body">
+    <p class="card__price" >
+      {{ subscription?.pricePerMonth }}+
+      <span>{{ getCurrencyWord(subscription?.pricePerMonth) }}</span>/міс
+    </p>
+    <h3 class="card__subscription">{{ subscription?.title }}</h3>
+    <p class="card__description">{{ subscription?.description }}</p>
+  </div>
+</div>

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { IntroService } from '../../../_system/_services/intro/intro.service';
 import { CoursesService } from '../../../_system/_services/courses/courses.service';
-import { IntroResponse } from '../../../_system/_interfaces/intro';
-import { CoursesResponse } from '../../../_system/_interfaces/courses';
+import { SubscriptionsResponse } from '../../../_system/_interfaces/subscriptions';
 import { FAQS } from '../../../_system/_constants';
 
 @Component({
@@ -14,32 +12,23 @@ import { FAQS } from '../../../_system/_constants';
 })
 
 export class HomeComponent implements OnInit {
-  public introData?: IntroResponse;
-  public coursesList?: CoursesResponse[];
+  public subscriptionList?: SubscriptionsResponse[];
   public faqsList: {question: string, answer: string}[] = FAQS;
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private introService: IntroService,
     private coursesService: CoursesService,
   ) {}
 
   ngOnInit() {
     const url = this.activatedRoute.snapshot.params['home'] ?? 'home';
 
-    this.loadAllCourses();
-    this.loadIntroData(url);
+    // this.loadAllCourses();
   }
 
   loadAllCourses() {
     this.coursesService.getAllCourses().subscribe(data => {
-      this.coursesList = data;
-    })
-  }
-
-  loadIntroData(url: string) {
-    this.introService.getIntroData(url).subscribe(data => {
-      this.introData = data;
+      this.subscriptionList = data;
     })
   }
 }

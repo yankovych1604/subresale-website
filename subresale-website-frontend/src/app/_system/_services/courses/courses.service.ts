@@ -3,6 +3,7 @@ import { environment } from '../../../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { CoursesResponse } from '../../_interfaces/courses';
+import {SubscriptionsResponse} from '../../_interfaces/subscriptions';
 
 @Injectable({
   providedIn: 'root'
@@ -18,8 +19,8 @@ export class CoursesService {
     private http: HttpClient,
   ) { }
 
-  getAllCourses(): Observable<CoursesResponse[]> {
-    return this.http.get<CoursesResponse[]>(`${this.api.courses}`);
+  getAllCourses(): Observable<SubscriptionsResponse[]> {
+    return this.http.get<SubscriptionsResponse[]>(`${this.api.courses}`);
   }
 
   getCoursesByIds(ids: string[]): Observable<CoursesResponse[]> {
