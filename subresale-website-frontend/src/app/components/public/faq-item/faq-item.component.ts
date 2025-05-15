@@ -1,6 +1,5 @@
 import { Component, Input, ViewChild, ElementRef } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { FaqsResponse } from '../../../_system/_interfaces/faqs';
 
 @Component({
   selector: 'app-faq-item',
@@ -13,7 +12,7 @@ import { FaqsResponse } from '../../../_system/_interfaces/faqs';
 })
 
 export class FaqItemComponent {
-  @Input() faq?: FaqsResponse;
+  @Input() faq?: {question: string, answer: string};
   @ViewChild('answerContent') answerContent!: ElementRef;
 
   public answerHeight: number = 0;

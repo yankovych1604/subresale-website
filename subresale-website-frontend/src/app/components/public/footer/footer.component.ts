@@ -13,6 +13,7 @@ import { SUBSCRIPTION } from '../../../_system/_constants';
   styleUrl: './footer.component.scss',
   standalone: true,
 })
+
 export class FooterComponent {
   public courses: {name: string, url: string}[] = SUBSCRIPTION;
 }

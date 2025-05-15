@@ -19,4 +19,5 @@ import { IntroBlockComponent } from "../../../components/public/intro-block/intr
     IntroBlockComponent,
   ]
 })
+
 export class HomeModule { }

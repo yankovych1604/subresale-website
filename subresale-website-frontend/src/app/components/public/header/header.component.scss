@@ -19,32 +19,30 @@
 
 
   &__logo {
-    gap: 10px 40px;
+    gap: 10px 15px;
     margin-right: 6px;
     @include mixins.flex(row, flex-start, center);
   }
 
   &__link {
-    gap: 0 15px;
-    height: 48px;
+    gap: 0 10px;
+    height: 40px;
+    padding: 8px 5px;
     cursor: pointer;
     text-decoration: none;
     @include mixins.flex(row, space-between, center);
+    @include mixins.box-style(2px solid $red, 10px, transparent);
   }
 
-&__logo-img {
-  width: 40px;
-  height: 40px;
-  border: 2px solid red; // червона рамка
-  border-radius: 8px;     // заокруглені кути (можна змінити значення)
-  padding: 2px;           // щоб рамка не притискалась до зображення
-  box-sizing: border-box; // щоб padding і border не збільшували розмір
-}
-
+  &__logo-img {
+    width: 24px;
+    height: 24px;
+  }
 
   &__logo-text {
-    width: 100px;
-    height: 100%;
+    width: 85px;
+    height: 32px;
+    line-height: 32px;
     @include mixins.fonts-text($manrope-bold, 16px, $black);
   }
 
@@ -102,38 +100,38 @@
   @include mixins.flex(row, flex-start, center);
 
   &__list {
-    gap: 0 2px;
+    gap: 0 10px;
     list-style: none;
     @include mixins.flex(row, flex-start, flex-start);
   }
 
   &__item {
     width: auto;
-    height: 48px;
+    height: 40px;
     @include mixins.flex(row, center, center);
 
     &-link {
       cursor: pointer;
-      padding: 12px 10px;
+      padding: 8px 5px;
       text-decoration: none;
       @include mixins.fonts-text($manrope-bold, 16px, $black);
-      @include mixins.box-style(1px solid transparent, 0px, transparent);
+      @include mixins.box-style(2px solid transparent, 0px, transparent);
     }
 
     &-link:hover {
-      @include mixins.box-style(1px solid $secondary, 10px, $primary);
+      @include mixins.box-style(2px solid $red, 10px, transparent);
     }
   }
 
   &__link {
-    width: 32px;
-    height: 48px;
+    width: 28px;
+    height: 40px;
     display: none;
     cursor: pointer;
 
     &-img {
-      width: 32px;
-      height: 32px;
+      width: 28px;
+      height: 28px;
     }
   }
 
@@ -164,7 +162,7 @@
 
   &-item {
     width: 100%;
-    height: 48px;
+    height: 40px;
     @include mixins.flex(row, flex-start, center);
   }
 
@@ -172,12 +170,13 @@
     width: 100%;
     cursor: pointer;
     text-align: center;
-    padding: 12px 18px;
+    padding: 8px 5px;
     text-decoration: none;
     @include mixins.fonts-text($manrope-bold, 14px, $black);
+    @include mixins.box-style(2px solid transparent, 0px, transparent);
   }
 
   &-link:hover {
-    @include mixins.box-style(1px solid $secondary, 10px, $primary);
+    @include mixins.box-style(2px solid $red, 10px, transparent);
   }
 }
