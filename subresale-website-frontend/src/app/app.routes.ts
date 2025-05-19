@@ -14,10 +14,10 @@ export const routes: Routes = [
   //   path: 'courses',
   //   loadChildren: () => import('./pages/public/courses/courses.module').then(m => m.CoursesModule)
   // },
-  // {
-  //   path: 'about-us',
-  //   loadChildren: () => import('./pages/public/about-us/about-us.module').then(m => m.AboutUsModule)
-  // },
+  {
+    path: 'about-us',
+    loadChildren: () => import('./pages/public/about-us/about-us.module').then(m => m.AboutUsModule)
+  },
   // {
   //   path: 'reviews',
   //   loadChildren: () => import('./pages/public/reviews/reviews.module').then(m => m.ReviewsModule)

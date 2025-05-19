@@ -212,6 +212,10 @@
   @media (max-width: $media-lg) {
     padding: 0 20px;
     margin: 0 auto 56px;
+
+    &__heading {
+      padding-bottom: 32px;
+    }
   }
 
   @media (max-width: $media-sm) {
