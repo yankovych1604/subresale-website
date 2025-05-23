@@ -68,7 +68,7 @@
     &-list {
       list-style: none;
       display: grid;
-      gap: 10px 25px;
+      gap: 10px 15px;
       grid-template-columns: repeat(2, 1fr);
     }
 
@@ -98,7 +98,7 @@
   }
 
   &__socials {
-    gap: 0 15px;
+    gap: 0 20px;
     @include mixins.flex(row, flex-start, flex-start);
   }
 

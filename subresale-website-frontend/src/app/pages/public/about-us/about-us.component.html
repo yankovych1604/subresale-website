@@ -1,31 +1,64 @@
-<div class="section1">
-  <div class="section1__container">
-    <header class="section1__header">
-      <h1 class="section1__headline">
-        Платите за підписки, якими давно не користуєтесь? Ви не одні.
-      </h1>
-      <p class="section1__description">
-        Ми створили SubResale, щоб це змінити. Це зручна та безпечна платформа, де ви можете продати непотрібні підписки, а інші — вигідно їх придбати.<br>
-            Жодних переплат. Жодних втрат.<br><br>
-            Підписки на стрімінги, програми, сервіси — якщо ви ними не користуєтесь, вони можуть стати цінними для когось іншого.
-        <br><br>
-        Slack was acquired by Salesforce in 2021.
-      </p>
-    </header>
+<div class="sections">
+  <section class="section1">
+    <div class="section1__container">
+      <div class="section1__header">
+        <div class="section1__heading">
+          <h2 class="section1__heading-text">Платите за підписки, якими давно не користуєтесь? Ви не одні</h2>
+        </div>
 
-    <div class="section1__stats">
-      <div class="stat">
-        <h3 class="stat-number">200k+</h3>
-        <p class="stat-description">paid<br>customers</p>
-      </div>
-      <div class="stat">
-        <h3 class="stat-number">77</h3>
-        <p class="stat-description">of the Fortune 100<br>use Slack</p>
-      </div>
-      <div class="stat">
-        <h3 class="stat-number">150+</h3>
-        <p class="stat-description">countries have<br>daily active users in Slack</p>
+        <div class="section1__description">
+          <p class="section1__description-title">Про SubResale</p>
+          <div class="section1__description-content">
+            <p class="section1__description-text">Ми створили SubResale, щоб це змінити. Це зручна та безпечна платформа, де ви можете продати непотрібні підписки, а інші — вигідно їх придбати. Жодних переплат. Жодних втрат</p>
+            <p class="section1__description-text">Підписки на стрімінги, програми, сервіси — якщо ви ними не користуєтесь, вони можуть стати цінними для когось іншого.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
+
+  <section class="section2">
+    <div class="section2__container">
+      <div class="section2__header">
+        <h2 class="section2__header-title">Наші досягнення</h2>
+        <p class="section2__header-subtitle">Кількість користувачів, охоплення та пропозиції, що вже доступні</p>
+      </div>
+
+      <div class="section2__stats">
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">7</h3>
+          <p class="section2__stat-description">доступних країн</p>
+        </div>
+
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">340+</h3>
+          <p class="section2__stat-description">відвідувачів</p>
+        </div>
+
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">24</h3>
+          <p class="section2__stat-description">види підписок</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class="section3__container">
+      <div class="section3__intro">
+        <h2 class="section3__intro-title">Категорії підписок</h2>
+        <p class="section3__intro-subtitle">Доступні категорії підписок та сервіси, що входять до них</p>
+      </div>
+
+      <div class="section3__content">
+        <div class="section3__category" *ngFor="let category of subscriptionCategories">
+          <h3 class="section3__category-title">{{ category.name }}</h3>
+
+          <div class="section3__category-icons">
+            <img [src]="subscription.url" [alt]="subscription.name" class="section3__category-icon" *ngFor="let subscription of category.icons" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </div>

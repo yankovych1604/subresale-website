@@ -11,8 +11,8 @@ mat-select {
 .mat-mdc-select-trigger {
   width: 100% !important;
   height: 100%;
-  gap: 0 8px;
-  padding: 5px 10px;
+  gap: 0 5px;
+  padding: 8px 5px;
   justify-content: space-between;
 }
 
@@ -33,6 +33,7 @@ mat-select {
 }
 
 .mat-mdc-select-panel {
+  max-height: 310px !important;
   padding: 15px 20px !important;
   box-shadow: none !important;
 }

@@ -1,11 +1,12 @@
 import { Component, OnDestroy, OnInit, ViewEncapsulation } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { NgIf } from '@angular/common';
+import {NgForOf, NgIf} from '@angular/common';
 import { Router } from '@angular/router';
 import { NavigationEnd, RouterLink } from '@angular/router';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { TokenService } from '../../../_system/_services/token/token.service';
+import {SUBSCRIPTION} from '../../../_system/_constants';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +15,7 @@ import { TokenService } from '../../../_system/_services/token/token.service';
     RouterLink,
     MatSelectModule,
     MatFormFieldModule,
+    NgForOf,
   ],
   templateUrl: './header.component.html',
   styleUrl: './header.component.scss',
@@ -26,6 +28,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   public isOpenedCourseMenu: boolean = false;
   public isOpenedNavigationMenu: boolean = false;
   public currentSubscriptions: Subscription[] = [];
+  public subscriptions: {name: string, url: string}[] = SUBSCRIPTION;
 
   constructor(
     private router: Router,

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SUBSCRIPTION_CATEGORIES } from '../../../_system/_constants';
 
 @Component({
   selector: 'app-about-us',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class AboutUsComponent {
+  public subscriptionCategories: {name: string, icons: {name: string, url: string}[], url: string}[] = SUBSCRIPTION_CATEGORIES;
 }

@@ -8,25 +8,20 @@
 
       <mat-select [(value)]="selectedCategory" disableRipple (openedChange)="openCourseMenu($event)" (selectionChange)="navigateToCategory($event.value)">
         <mat-option [value]="'default'" disabled>Підписки</mat-option>
-        <mat-option [value]="'cinema'">Кіно</mat-option>
-        <mat-option [value]="'music'">Музика</mat-option>
-        <mat-option [value]="'design'">Дизайн</mat-option>
-        <mat-option [value]="'study'">Навчання</mat-option>
-        <mat-option [value]="'game'">Ігри</mat-option>
-        <mat-option [value]="'socials'">Соціальні мережі</mat-option>
+        <mat-option [value]="subscription.url" *ngFor="let subscription of subscriptions">{{ subscription.name }}</mat-option>
       </mat-select>
     </div>
 
     <nav class="navigation">
       <ul class="navigation__list">
-        <li class="navigation__item">
-          <a class="navigation__item-link" [routerLink]="'/about-us'">Про нас</a>
+        <li class="navigation__item" [routerLink]="'/about-us'">
+          <a class="navigation__item-link">Про нас</a>
         </li>
-        <li class="navigation__item" *ngIf="isLoggedIn">
-          <a class="navigation__item-link" [routerLink]="'/account'">Мій кабінет</a>
+        <li class="navigation__item" *ngIf="isLoggedIn" [routerLink]="'/account'">
+          <a class="navigation__item-link">Мій кабінет</a>
         </li>
-        <li class="navigation__item" *ngIf="!isLoggedIn">
-          <a class="navigation__item-link" [routerLink]="'/sign-in'">Вхід</a>
+        <li class="navigation__item" *ngIf="!isLoggedIn" [routerLink]="'/sign-in'">
+          <a class="navigation__item-link">Вхід</a>
         </li>
       </ul>
       <a class="navigation__link" (click)="openNavigationMenu()">
@@ -38,14 +33,14 @@
 
 <nav class="mobile__navigation" *ngIf="isOpenedNavigationMenu" (click)="openNavigationMenu()">
   <ul class="mobile__navigation-list">
-    <li class="mobile__navigation-item">
-      <a class="mobile__navigation-link" [routerLink]="'/about-us'">Про нас</a>
+    <li class="mobile__navigation-item" [routerLink]="'/about-us'">
+      <a class="mobile__navigation-link">Про нас</a>
     </li>
-    <li class="mobile__navigation-item" *ngIf="isLoggedIn">
-      <a class="mobile__navigation-link" [routerLink]="'/account'">Мій кабінет</a>
+    <li class="mobile__navigation-item" *ngIf="isLoggedIn" [routerLink]="'/account'">
+      <a class="mobile__navigation-link">Мій кабінет</a>
     </li>
-    <li class="mobile__navigation-item" *ngIf="!isLoggedIn">
-      <a class="mobile__navigation-link" [routerLink]="'/sign-in'">Вхід</a>
+    <li class="mobile__navigation-item" *ngIf="!isLoggedIn" [routerLink]="'/sign-in'">
+      <a class="mobile__navigation-link">Вхід</a>
     </li>
   </ul>
 </nav>
