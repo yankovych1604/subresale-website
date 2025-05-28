@@ -1,0 +1,26 @@
+@use './fonts';
+
+// medias
+$media-xs: 320px;
+$media-sm: 425px;   //0 10px - padding
+$media-md: 576px;
+$media-lg: 768px;   //0 20px - padding   //0 56px - margin
+$media-xl: 1024px;  //                   //0 80px - margin
+$media-xxl: 1240px; // 0 30px - padding
+
+// fonts
+$manrope-regular: "Manrope Regular";
+$manrope-light: "Manrope Light";
+$manrope-medium: "Manrope Medium";
+$manrope-semibold: "Manrope SemiBold";
+$manrope-bold: "Manrope Bold";
+
+// colors
+$primary: #f5f6fa;
+$secondary: #d0d5e1;
+$white: #ffffff;
+$black: #000000;
+$red: #ff1a00;
+$gray: #606980;
+$gunmetal: #464e62;
+$darkgray: #212631;

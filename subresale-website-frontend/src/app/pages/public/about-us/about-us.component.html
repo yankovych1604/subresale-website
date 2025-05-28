@@ -1,0 +1,64 @@
+<div class="sections">
+  <section class="section1">
+    <div class="section1__container">
+      <div class="section1__header">
+        <div class="section1__heading">
+          <h2 class="section1__heading-text">Платите за підписки, якими давно не користуєтесь? Ви не одні</h2>
+        </div>
+
+        <div class="section1__description">
+          <p class="section1__description-title">Про SubResale</p>
+          <div class="section1__description-content">
+            <p class="section1__description-text">Ми створили SubResale, щоб це змінити. Це зручна та безпечна платформа, де ви можете продати непотрібні підписки, а інші — вигідно їх придбати. Жодних переплат. Жодних втрат</p>
+            <p class="section1__description-text">Підписки на стрімінги, програми, сервіси — якщо ви ними не користуєтесь, вони можуть стати цінними для когось іншого.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section2">
+    <div class="section2__container">
+      <div class="section2__header">
+        <h2 class="section2__header-title">Наші досягнення</h2>
+        <p class="section2__header-subtitle">Кількість користувачів, охоплення та пропозиції, що вже доступні</p>
+      </div>
+
+      <div class="section2__stats">
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">7</h3>
+          <p class="section2__stat-description">доступних країн</p>
+        </div>
+
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">340+</h3>
+          <p class="section2__stat-description">відвідувачів</p>
+        </div>
+
+        <div class="section2__stat">
+          <h3 class="section2__stat-number">24</h3>
+          <p class="section2__stat-description">види підписок</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section3">
+    <div class="section3__container">
+      <div class="section3__intro">
+        <h2 class="section3__intro-title">Категорії підписок</h2>
+        <p class="section3__intro-subtitle">Доступні категорії підписок та сервіси, що входять до них</p>
+      </div>
+
+      <div class="section3__content">
+        <div class="section3__category" *ngFor="let category of subscriptionCategories" [routerLink]="'/subscriptions/'+category.url">
+          <h3 class="section3__category-title">{{ category.name }}</h3>
+
+          <div class="section3__category-icons">
+            <img [src]="subscription.url" [alt]="subscription.name" class="section3__category-icon" *ngFor="let subscription of category.icons" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

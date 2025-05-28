@@ -1,0 +1,383 @@
+@use "../../../_system/_styles/_mixins.scss";
+@use "../../../_system/_styles/_theme-material.scss" as *;
+
+.sections {
+  width: 100%;
+  gap: 120px 0;
+  padding-top: 78px;
+  margin-bottom: 120px;
+  background-color: $primary;
+  @include mixins.flex(column, flex-start, flex-start);
+
+  @media (max-width: $media-xl) {
+    gap: 80px 0;
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $media-lg) {
+    gap: 56px 0;
+    margin-bottom: 56px;
+  }
+}
+
+.section1 {
+  width: 100%;
+  padding: 0 40px;
+  margin: 120px auto 0;
+
+  &__container {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 60px 0;
+    @include mixins.flex(column, flex-start, flex-start);
+  }
+
+  &__header {
+    width: 100%;
+    gap: 40px 0;
+    @include mixins.flex(column, flex-start, flex-start);
+  }
+
+  &__heading {
+    width: 100%;
+    @include mixins.flex(row, flex-start, flex-start);
+
+    &-text {
+      text-align: center;
+      line-height: 50px;
+      letter-spacing: -2.45px;
+      @include mixins.fonts-text($manrope-bold, 50px, $black);
+    }
+  }
+
+  &__description {
+    width: 100%;
+    gap: 10px 0;
+    @include mixins.flex(column, flex-start, center);
+
+    &-title {
+      text-align: center;
+      letter-spacing: -0.96px;
+      @include mixins.fonts-text($manrope-bold, 32px, $red);
+    }
+
+    &-content {
+      gap: 20px 0;
+      @include mixins.flex(column, flex-start, center);
+    }
+
+    &-text {
+      text-align: center;
+      letter-spacing: 0.27px;
+      @include mixins.fonts-text($manrope-medium, 16px, $black);
+    }
+  }
+
+  @media (max-width: $media-xxl) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $media-xl) {
+    margin: 80px auto 0;
+
+    &__header {
+      gap: 30px 0;
+    }
+
+    &__heading-text {
+      line-height: 38px;
+      letter-spacing: -1.45px;
+      @include mixins.fonts-text($manrope-bold, 34px, $black);
+    }
+
+    &__description {
+      gap: 5px 0;
+
+      &-title {
+        line-height: 28px;
+        letter-spacing: -0.96px;
+        @include mixins.fonts-text($manrope-bold, 24px, $red);
+      }
+
+      &-content {
+        gap: 10px 0;
+      }
+    }
+  }
+
+  @media (max-width: $media-lg) {
+    padding: 0 20px;
+    margin: 56px auto 0;
+  }
+
+  @media (max-width: $media-md) {
+    &__header {
+      gap: 20px 0;
+    }
+
+    &__heading-text {
+      line-height: 30px;
+      @include mixins.fonts-text($manrope-bold, 26px, $black);
+    }
+
+    &__description-title {
+      line-height: 24px;
+      @include mixins.fonts-text($manrope-bold, 20px, $red);
+    }
+  }
+
+  @media (max-width: $media-sm) {
+    padding: 0 10px;
+  }
+}
+
+.section2 {
+  width: 100%;
+  padding: 0 40px;
+
+  &__container {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px 0;
+    @include mixins.flex(column, flex-start, flex-start);
+  }
+
+  &__header {
+    width: 100%;
+    gap: 10px 0;
+    @include mixins.flex(column, flex-start, center);
+
+    &-title {
+      text-align: center;
+      letter-spacing: -0.96px;
+      @include mixins.fonts-text($manrope-bold, 32px, $red);
+    }
+
+    &-subtitle {
+      text-align: center;
+      letter-spacing: 0.27px;
+      @include mixins.fonts-text($manrope-medium, 16px, $black);
+    }
+  }
+
+  &__stats {
+    width: 100%;
+    gap: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__stat {
+    width: 100%;
+    margin: 0 auto;
+    padding: 15px 10px;
+    @include mixins.flex(column, flex-start, center);
+    @include mixins.box-style(1px solid $white, 30px, $white);
+
+    &-number {
+      text-align: center;
+      letter-spacing: -0.96px;
+      @include mixins.fonts-text($manrope-bold, 32px, $black);
+    }
+
+    &-description {
+      text-align: center;
+      letter-spacing: 0.27px;
+      @include mixins.fonts-text($manrope-medium, 16px, $black);
+    }
+  }
+
+  @media (max-width: $media-xxl) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $media-xl) {
+    &__header {
+      gap: 5px 0;
+
+      &-title {
+        line-height: 28px;
+        letter-spacing: -0.96px;
+        @include mixins.fonts-text($manrope-bold, 24px, $red);
+      }
+    }
+
+    &__stat {
+      &-number {
+        line-height: 28px;
+        letter-spacing: -0.96px;
+        @include mixins.fonts-text($manrope-bold, 24px, $black);
+      }
+    }
+  }
+
+  @media (max-width: $media-lg) {
+    padding: 0 20px;
+
+    &__stats {
+      gap: 0 20px;
+    }
+  }
+
+  @media (max-width: $media-md) {
+    &__header {
+      &-title {
+        line-height: 24px;
+        @include mixins.fonts-text($manrope-bold, 20px, $red);
+      }
+    }
+
+    &__stats {
+      max-width: 385px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+    }
+
+    &__stat {
+      &-number {
+        line-height: 24px;
+        @include mixins.fonts-text($manrope-bold, 20px, $black);
+      }
+    }
+  }
+
+  @media (max-width: $media-sm) {
+    padding: 0 10px;
+  }
+}
+
+.section3 {
+  width: 100%;
+  padding: 0 40px;
+
+  &__container {
+    max-width: 780px;
+    width: 100%;
+    margin: 0 auto;
+    gap: 20px 0;
+    @include mixins.flex(column, flex-start, flex-start);
+  }
+
+  &__intro {
+    width: 100%;
+    gap: 10px 0;
+    @include mixins.flex(column, flex-start, center);
+
+    &-title {
+      text-align: center;
+      letter-spacing: -0.96px;
+      @include mixins.fonts-text($manrope-bold, 32px, $red);
+    }
+
+    &-subtitle {
+      text-align: center;
+      letter-spacing: 0.27px;
+      @include mixins.fonts-text($manrope-medium, 16px, $black);
+    }
+  }
+
+  &__content {
+    width: 100%;
+    display: grid;
+    gap: 20px 20px;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__category {
+    gap: 10px 0;
+    cursor: pointer;
+    padding: 15px 10px;
+    @include mixins.flex(column, flex-start, flex-start);
+    @include mixins.box-style(1px solid $white, 30px, $white);
+
+    &-title {
+      width: 100%;
+      text-align: center;
+      letter-spacing: -0.96px;
+      padding-bottom: 5px;
+      border-bottom: 1px solid $secondary;
+      @include mixins.fonts-text($manrope-bold, 22px, $black);
+    }
+
+    &-icons {
+      width: 100%;
+      padding-top: 5px;
+      border-top: 1px solid $secondary;
+      @include mixins.flex(row, space-evenly, flex-start);
+    }
+
+    &-icon {
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  &__category:hover {
+    @include mixins.box-style(1px solid $secondary, 30px, $white);
+  }
+
+  @media (max-width: $media-xxl) {
+    padding: 0 30px;
+  }
+
+  @media (max-width: $media-xl) {
+    &__intro {
+      gap: 5px 0;
+
+      &-title {
+        line-height: 28px;
+        letter-spacing: -0.96px;
+        @include mixins.fonts-text($manrope-bold, 24px, $red);
+      }
+    }
+
+    &__category {
+      &-title {
+        @include mixins.fonts-text($manrope-bold, 20px, $black);
+      }
+    }
+  }
+
+  @media (max-width: $media-lg) {
+    padding: 0 20px;
+
+    &__content {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: $media-md) {
+    &__intro {
+      &-title {
+        line-height: 24px;
+        @include mixins.fonts-text($manrope-bold, 20px, $red);
+      }
+    }
+
+    &__content {
+      max-width: 385px;
+      width: 100%;
+      margin: 0 auto;
+      gap: 20px 0;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(6, 1fr);
+    }
+
+    &__category {
+      &-title {
+        @include mixins.fonts-text($manrope-bold, 18px, $black);
+      }
+    }
+  }
+
+  @media (max-width: $media-sm) {
+    padding: 0 10px;
+  }
+}

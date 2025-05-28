@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="header">
+    <div class="header__logo">
+      <a class="header__link" [routerLink]="''">
+        <img src="assets/icons/subscription-icon.jpg" alt="course-academy-logo" class="header__logo-img">
+        <p class="header__logo-text">SubResale</p>
+      </a>
+
+      <mat-select [(value)]="selectedCategory" disableRipple (openedChange)="openCourseMenu($event)" (selectionChange)="navigateToCategory($event.value)">
+        <mat-option [value]="'default'" disabled>Підписки</mat-option>
+        <mat-option [value]="subscription.url" *ngFor="let subscription of subscriptions">{{ subscription.name }}</mat-option>
+      </mat-select>
+    </div>
+
+    <nav class="navigation">
+      <ul class="navigation__list">
+        <li class="navigation__item" [routerLink]="'/about-us'">
+          <a class="navigation__item-link">Про нас</a>
+        </li>
+        <li class="navigation__item" *ngIf="isLoggedIn" [routerLink]="'/account'">
+          <a class="navigation__item-link">Мій кабінет</a>
+        </li>
+        <li class="navigation__item" *ngIf="!isLoggedIn" [routerLink]="'/sign-in'">
+          <a class="navigation__item-link">Вхід</a>
+        </li>
+      </ul>
+      <a class="navigation__link" (click)="openNavigationMenu()">
+        <img src="assets/icons/navigation-link-icon.png" alt="menu" class="navigation__link-img">
+      </a>
+    </nav>
+  </div>
+</div>
+
+<nav class="mobile__navigation" *ngIf="isOpenedNavigationMenu" (click)="openNavigationMenu()">
+  <ul class="mobile__navigation-list">
+    <li class="mobile__navigation-item" [routerLink]="'/about-us'">
+      <a class="mobile__navigation-link">Про нас</a>
+    </li>
+    <li class="mobile__navigation-item" *ngIf="isLoggedIn" [routerLink]="'/account'">
+      <a class="mobile__navigation-link">Мій кабінет</a>
+    </li>
+    <li class="mobile__navigation-item" *ngIf="!isLoggedIn" [routerLink]="'/sign-in'">
+      <a class="mobile__navigation-link">Вхід</a>
+    </li>
+  </ul>
+</nav>
