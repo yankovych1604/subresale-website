@@ -25,7 +25,11 @@ import protectedRoutes from './routes/protectedRoutes';
 const app = express();
 const port = process.env['PORT'] || 3000;
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://subresale-website.netlify.app',
+  methods: ['GET', 'POST', 'PATCH', 'DELETE'],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/public-api', publicRoutes);
