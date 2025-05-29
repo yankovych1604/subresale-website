@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
-  BACKEND_PRIVATE_URL: 'http://localhost:3000/api/',
-  BACKEND_PUBLIC_URL: 'http://localhost:3000/public-api/',
+  BACKEND_PRIVATE_URL: 'https://subresale-website.onrender.com/api/',
+  BACKEND_PUBLIC_URL: 'https://subresale-website.onrender.com/public-api/',
 };
