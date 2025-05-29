@@ -40,7 +40,7 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;npm.start (1).executor&quot;: &quot;Run&quot;,
     &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/maksym_yankovych/Desktop/subresale-website-project/subresale-website-backend/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
@@ -96,6 +96,8 @@
       <workItem from="1748415325559" duration="3905000" />
       <workItem from="1748444065133" duration="7141000" />
       <workItem from="1748454918174" duration="21029000" />
+      <workItem from="1748476157892" duration="476000" />
+      <workItem from="1748476956827" duration="498000" />
     </task>
     <servers />
   </component>
